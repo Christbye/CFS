@@ -1,39 +1,39 @@
-#½¨¿â
+#å»ºåº“
 create database cfs;
 use cfs;
 
-#·ÖÀà
+#åˆ†ç±»
 create table KIND(
 id int primary key auto_increment,
 name varchar(20));
 
 insert into KIND(name,k_id) values('food');
 insert into KIND(name,k_id) values('other');
-#ÀàĞÍ
+#ç±»å‹
 create table TYPE(
 id int primary key auto_increment,
 name varchar(20) unique,
 k_id int,
 foreign key(k_id) references KIND(id)
 );
-#Ê³Æ·ÀàĞÍ
-insert into TYPE(name,k_id) values('Ë®¹ûÀà',1);
-insert into TYPE(name,k_id) values('Êß²ËÀà',1);
-insert into TYPE(name,k_id) values('¹ÈÎïÀà',1);
-insert into TYPE(name,k_id) values('²èÒû',1);
-insert into TYPE(name,k_id) values('Ò©²ÄÀà',1);
-insert into TYPE(name,k_id) values('Ò©Îï',1);
+#é£Ÿå“ç±»å‹
+insert into TYPE(name,k_id) values('æ°´æœç±»',1);
+insert into TYPE(name,k_id) values('è”¬èœç±»',1);
+insert into TYPE(name,k_id) values('è°·ç‰©ç±»',1);
+insert into TYPE(name,k_id) values('èŒ¶é¥®',1);
+insert into TYPE(name,k_id) values('è¯æç±»',1);
+insert into TYPE(name,k_id) values('è¯ç‰©',1);
 insert into TYPE(name,k_id) values('test1',1);
 insert into TYPE(name,k_id) values('test2',1);
-#ÆäËûÀàĞÍ
-insert into TYPE(name,k_id) values('¶ùÍ¯Çå»ğ',2);
-insert into TYPE(name,k_id) values('Ö¢×´·ÖÎö',2);
-insert into TYPE(name,k_id) values('ÒûÊ³Ï°¹ß',2);
-insert into TYPE(name,k_id) values('ÌåÖÊ²îÒì',2);
-insert into TYPE(name,k_id) values('ÂÛÌ³',2);
+#å…¶ä»–ç±»å‹
+insert into TYPE(name,k_id) values('å„¿ç«¥æ¸…ç«',2);
+insert into TYPE(name,k_id) values('ç—‡çŠ¶åˆ†æ',2);
+insert into TYPE(name,k_id) values('é¥®é£Ÿä¹ æƒ¯',2);
+insert into TYPE(name,k_id) values('ä½“è´¨å·®å¼‚',2);
+insert into TYPE(name,k_id) values('è®ºå›',2);
 insert into TYPE(name,k_id) values('TEST1',2);
 
-#ÄÚÈİ
+#å†…å®¹
 create table COMMENT(
 id int primary key auto_increment,
 name varchar(50) not null unique,
